@@ -1,0 +1,97 @@
+#projects {
+  background: linear-gradient(135deg, #f7f7f7, #e6e6e6);
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #2c3e50;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.section-line {
+  width: 60px;
+  height: 4px;
+  background: #3498db;
+  margin: 0 auto 30px;
+  border-radius: 2px;
+}
+
+.content-box {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  text-align: left;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards; /* More visible acceleration */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for content-box */
+.content-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.content-box h3 {
+  font-size: 1.5rem;
+  color: #2980b9;
+  margin-bottom: 10px;
+}
+
+.content-box ul {
+  list-style-type: disc;
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.content-box ul li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.content-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px); /* Start from a lower position */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .content-box {
+      padding: 15px 20px;
+  }
+
+  #projects h2 {
+      font-size: 2rem;
+  }
+
+  .content-box h3 {
+      font-size: 1.3rem;
+  }
+
+  .content-box ul li {
+      font-size: 0.9rem;
+  }
+
+  .content-box p {
+      font-size: 0.9rem;
+  }
+}
